@@ -1,3 +1,5 @@
+
+
 export default async function Comments({postSlug}: {postSlug: string}) {
   
   const WEBSITE_URL = 'http://localhost:3000'
@@ -28,6 +30,7 @@ export default async function Comments({postSlug}: {postSlug: string}) {
         <button type="submit">send comment</button>
       </form>
 
+      {/* @ts-ignore */}
       {comments.map((comment) => {
           return (
               <li key={comment.id}>
