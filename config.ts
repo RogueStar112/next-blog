@@ -1,0 +1,1 @@
+export const WEB_SITE = process.env.NEXT_PUBLIC_vERCEL_URL ? `http://${process.env.NEXT_PUBLIC_VERCEL_URL}` : 'http://localhost:3000'
