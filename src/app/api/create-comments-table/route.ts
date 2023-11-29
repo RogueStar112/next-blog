@@ -3,8 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
 
-  try {
-    await sql`CREATE TABLE comments ( 
+    await sql`CREATE TABLE IF NOT EXISTS comments ( 
       id varchar(255),
       slug varchar(255),
       username varchar(255),
@@ -12,10 +11,4 @@ export async function GET(request: Request) {
 
     return NextResponse.json({ message: "Table created" });
 
-  } catch (error) {
-
-    console.log(error);
-
-  }
-  
 }
